@@ -1,0 +1,12 @@
+#check palindrome
+#using two pointer approach
+def valid_palindrome(arr):
+  start = 0
+  end = n-1  
+  while(start <end):
+    if(arr[start] == arr[end]):
+      start = start+1
+      end = end+1
+    else:
+      return 0
+  return 1
