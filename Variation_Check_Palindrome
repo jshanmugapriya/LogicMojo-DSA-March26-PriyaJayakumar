@@ -1,0 +1,15 @@
+def valid_palindrome(arr):
+    # Fix: lower() only the character 'char', not the whole list 'arr'
+    updated_arr = [char.lower() for char in arr if char.isalnum()]
+    
+    start = 0
+    end = len(updated_arr) - 1
+    
+    while start <= end:
+        if updated_arr[start] == updated_arr[end]:
+            start += 1
+            end -= 1
+        else:
+            return 0  # False
+
+    return 1  # True
