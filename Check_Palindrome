@@ -1,12 +1,13 @@
-#check palindrome
 #using two pointer approach
+#Time complexity O(n)
+#Space complexity O(1)
 def valid_palindrome(arr):
   start = 0
-  end = n-1  
-  while(start <end):
-    if(arr[start] == arr[end]):
-      start = start+1
-      end = end+1
+  end = len(arr)-1
+  while start <=end:
+    if arr[start] == arr[end]:
+      start  += 1
+      end  -= 1
     else:
-      return 0
-  return 1
+      return False
+  return True
