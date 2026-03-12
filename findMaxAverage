@@ -1,0 +1,14 @@
+def findMaxAverage(nums, target):
+    current_sum = 0
+    for i in range(k):
+        current_sum += nums[i]
+    
+    max_sum = current_sum
+    k = target
+    for i in range(target, len(nums)):
+        current_sum += current_sum - nums[i-target]+nums[i]
+        # Update the best we've seen
+        if current_sum > max_sum:
+            max_sum = current_sum
+            
+    return max_sum / k
