@@ -1,0 +1,17 @@
+'''
+In sorted array, find 2 elements whose sum is equal to target
+'''
+
+def twosum_sortedarray(arr, target):
+  start = 0
+  end = len(arr)-1
+   
+  while(start < end):
+    if(arr[start]+arr[end] == target):
+      return True
+    elif(arr[start]+arr[end] < target):
+      start += 1
+    else:
+      end -= 1
+
+  return False
